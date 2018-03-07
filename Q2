@@ -1,0 +1,18 @@
+class Pilha:
+  def __init__(self):
+    self._itens = []
+  def isVazio(self):
+    if (len(self._itens) == 0):
+      return "Vazio"
+  def empilhar(self, item):
+    if item not in self._itens:
+      self._itens.append(item)
+  def desempilhar(self, item):
+    if len(self._itens)!=0:
+      self._itens.pop(-1)
+  def peek(self):
+    return self.items[len(self.items)-1]
+  def tamanho(self):
+    return len(self.items)
+
+pilha = Pilha()
